@@ -1,0 +1,818 @@
+body{
+    margin: 5em;
+}
+
+@media (min-width: 780px){
+header{
+    position: fixed;
+    width: 100%;
+    height: 50%;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+
+nav{
+    /*background-color:bluee;*/
+    width: 110%;
+    height: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "logo sociales"
+    "logo links"
+    " contenedor contenedor";
+}
+
+.logo{
+    background-color: rgb(255, 255, 255);
+    grid-area: logo;
+}
+.h2{
+    font-family: cursive;
+}
+}
+
+.sociales{
+    background-color: rgb(4, 205, 255);
+    grid-area: sociales;
+    height:50px;
+ 
+}
+.links{
+    background-color: rgb(18, 2, 90);
+    grid-area: links;
+    height:70px;   
+}
+
+
+
+/* BOTONES SOCIALE*/
+
+.sociales{
+    flex-direction: row;   
+}
+
+.sociales li a{
+    text-align: center;
+}
+.sociales{display: flex;}
+
+
+/* BOTONES LINKSS*/
+
+.links{
+    flex-direction: row;   
+}
+
+.links{display: flex;}
+
+
+/*BOTONES DE  linkss*/
+
+ul,ol{
+    list-style: none;/*van a desapareser todo los puntitos*/
+}
+
+.nav li a{
+    color: rgb(213, 219, 226); /*cambia de color las letras*/
+    text-decoration: none; /*quita los subrayados de las letras*/
+    padding: 8px 10px; /* 10 de altura   y 15 de largo*/
+    display: block; /*para separa los menu */
+    margin-left: 10px;/* lleva al logo hacia la izquierd es decir separa los botones*/ 
+}
+
+
+.nav ul a{
+    background-color: rgb(241, 244, 247);/* pone color de fondo en subprograma*/
+    color: black;
+   
+}
+
+
+.nav>li{
+    float:left; /*separa los botones*/
+}
+
+.nav li a:hover{
+    color: rgb(39, 96, 129); /*cuando pasa el percursor*/
+}
+
+ /*ocultar los menu*/
+ .nav li ul{
+    display:none; 
+    position: absolute;
+    min-width: 120px; /*crese el menu*/
+  }
+/*APARESE LOS SUBMENUS*/
+
+.nav li:hover > ul{
+    display: block;
+ }
+
+ /* para colocar los submenus a lado  */
+
+.nav li ul li{
+    position: relative;
+}
+
+.nav a  {
+    /*font-weight: 600; /*para aserle en negrita */
+    padding-right: 10px; /* separa los ellementos de los link*/
+    font-size:22px;
+}
+
+/* BOTONES DE SOCIALES*/
+
+.sociales{
+    display: flex;
+   justify-content:space-around ;
+}
+
+ul,ol{
+    list-style: none;/*van a desapareser todo los puntitos*/
+    
+}
+
+.so>li{
+    float:left; /*pone los menus en orden*/
+}
+
+.so  a:hover{
+    color: rgb(241, 241, 247); /*cuando pasa el percursor*/
+    text-align: center;
+}
+
+.so a{
+    /*font-weight: 600; /*para aserle en negrita */
+    padding-right: 50px; /* separa los ellementos de los link*/
+    font-size:1.2em;
+    text-align: center;
+    color: rgb(223, 225, 233); /*cambia de color las letras*/
+    text-decoration: none; /*quita los subrayados de las letras*/   
+}
+
+/*.so .icono img{
+    border-radius: 100px;
+}
+*/
+.so img{
+    height: 40px;
+    width: 40px;
+    background-position: center center;
+    background-size: cover;  
+ }
+
+/* LOGO*/
+
+.logo img{
+    height: 90px; /* se pone tanto la imagen al tamaño  de los enlases*/
+    margin-left: 20px;/* lleva al logo hacia la izquierd*/  
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;/*con esto se sube el nombre de la compañia hacia arriba junto con los enlases*/
+    align-items: center; /*el logo se alinea  a los otros de los elementos*/
+}
+
+
+
+.nav  button{
+    width: 150px;
+    height:40px ;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 87, 117);
+    background-position: center center;
+}
+/* HERO*/
+#hero{
+    display: flex; /*la imagen llega al tope con los menus*/
+    align-items: center;/*coloca el texto al centro*/
+   text-align: center;
+    justify-content: center;/*el texto recorre un poco hacia la izquierda*/
+    height: 90vh;
+    flex-direction: column;
+    background-image: url("images\ \(17\)_16705830053379.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;/*engranda la imagen para que no quede espacios a los costados*/
+    background-position: center center;
+    padding: 10px 10px;
+}
+
+#hero h1{
+   
+    font-size: 3.2em;/*engranda al texto*/
+   color: rgb(35, 109, 219);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/*tipo de letra*/
+ }
+
+#hero .container{
+    padding:90px 12px;
+}
+
+
+/*SLIDER*/
+
+/*.slider h1{
+    text-align: center;
+    color: blueviolet;
+}
+
+.slider{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;/*oculta los elementos que estan fuera del padre*/
+/*}
+
+.slider ul{
+    display: flex;
+    animation:cambio 20s infinite alternate linear;
+    width: 400%;
+    height: 100vh;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+      width: 100%;
+      height: 90%;
+}
+
+/*dar animacion para que pase de una a otra imagen */
+
+/*@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left:0 ;}
+
+    25%{margin-left:-100%;}
+    45%{margin-left:-100%;}
+
+    50%{margin-left:-200%;}
+    70%{margin-left:-200%;}
+
+    75%{margin-left:-300%;}
+    100%{margin-left:-300%;}
+}*/
+
+
+
+
+/* PROGRAMAS DE ESTUDIO*/
+
+#programas{
+    color: rgb(2, 2, 2);
+    text-align: center;
+}
+
+#programas .container{
+    padding: 100px 12px;
+}
+
+#programas h2{
+    color:rgb(19, 16, 16);
+    text-align: center;
+    font-size: 2.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.color-acento{ color:rgb(212, 227, 230); }
+
+#programas .carta{
+    width: 100%;
+    margin:20;
+    border-radius: 25px;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    background-color:rgb(17, 12, 12);
+    box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.2);
+    cursor: default;
+    transform: all 400ms ease; 
+    margin:20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+
+
+#programas .carta:first-child{
+    background-color: rgb(236, 19, 19);
+    border: 2px solid rgb(236, 19, 19);
+}
+
+#programas .carta:nth-child(2){
+    background-color: rgb(245, 197, 67);
+    border: 2px solid rgb(245, 197, 67);
+}
+
+#programas .carta:nth-child(3){
+    background-color: rgb(45, 0, 248);
+    border: 2px solid rgb(45, 0, 248);
+}
+
+#programas .carta:nth-child(4){
+    background-color: rgb(245, 139, 52);
+    border: 2px solid rgb(240, 158, 92);
+}
+
+#programas .carta:nth-child(5){
+    background-color: rgb(67, 180, 23);
+    border: 2px solid rgb(71, 163, 34);
+}
+
+.carta:hover{
+    box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.4);
+    transform: translatey(-3%); /* separa a tres %*/
+}
+
+
+.carta .contenido{
+    padding: 15px;
+    text-align: center;
+}
+
+
+#programas p{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 1.0em;
+}
+
+
+
+.carta img{
+    width: 100%;
+    height: 210px;   
+}
+
+
+
+#programas{
+   background-color: rgb(255, 255, 255);/* fondo de la pantalla*/
+   text-align: center; 
+  
+}
+
+
+@media (min-width:780){
+
+   .programas .carta{
+          display : flex;
+         justify-content: center;
+         flex-wrap: wrap;/*para poner abjo las cartas cuando ya no caen*/
+        
+   }
+   #programas .programas{
+    display: flex;
+    justify-content: center;
+}
+
+#programas h2{
+    font-size: none;
+}
+
+#programas h3{
+    margin-top: 0;
+}
+
+}
+
+
+/* CONTA*/
+
+#conta{
+    margin-top: 12px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+#conta .aulas h3{
+    margin-top: 12px;
+    font-size: 1.6em;
+    color: black;
+
+}
+
+#conta p{
+    margin-top: 12px;
+    font-size: 1.2em;
+    color: black;
+}
+
+
+#conta .aulas{
+    width:80%;
+    margin-top: 12px;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 12px;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.aulas:hover{
+    box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.4);
+    transform: translatey(-3%); /* separa a tres %*/
+}
+
+.gramas .aulas:hover{
+    background-color: rgb(77, 85, 197);
+}
+
+
+
+.aulas img{
+    width: 30%;
+    height: 60px;
+}
+
+@media (min-width: 780px){
+   #conta .gramas{
+    display: flex;
+    justify-content: center;
+   }
+
+
+#conta p{
+    display:block;
+    margin-bottom: 30px;
+}
+
+#conta h3{
+    font-size: 4em;
+}
+}
+
+/*DOCENTE*/
+
+#profesionales{background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0,0.0),
+    rgba(0, 0, 0, 0.0)
+)
+,url("images\ \(25\)_16706296126379.jpeg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;}
+
+#profesionales{
+    width: 100%;
+    height: 30vh 0;
+    background-color: rgb(141, 72, 72);
+}
+
+#profesionales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1350px;
+    margin: auto;
+}
+
+.profesionales{
+    display: flex;
+    flex-direction:column;
+    padding: 40px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.profesionales h5{
+    margin-bottom: 30px;/* da un espaciado entre el link*/
+    color: rgb(255, 254, 254);  
+}
+
+.profesionales h4{
+    margin-bottom: 10px;/* da un espaciado entre el link*/
+    color: rgb(38, 69, 241);
+}
+
+.profesionales p{
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+}
+.profesionales button{
+    background-color: rgb(14, 182, 248);
+    border: 2px solid #00d9ff;
+    color: aliceblue;
+    border-radius:10px;
+    width:200px;
+    height:50px;
+}
+
+.profesionales img{
+    width: 90%;
+    height: 70px;
+    
+}
+
+
+/*CAJAS*/
+
+#cajas{
+    
+    background-color: rgb(255, 255, 255);/* fondo de la pantalla*/
+    text-align: center; 
+    color: rgb(0, 0, 0);
+
+    font-family:Arial, Helvetica, sans-serif;   
+}
+
+#cajas h2{
+    color: rgb(2, 2, 2);
+    text-align: center;
+    font-size: 2.3em;
+
+}
+
+.tex:first-child{
+    width: 80%;
+    height:78vh;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(58, 57, 57);
+    margin:40px;
+}
+
+.tex:nth-child(2){
+    width: 80%;
+    height:84vh;
+    margin:40px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(37, 37, 37);
+}
+
+.tex:nth-child(3){
+    width: 80%;
+    height:130vh;
+    margin:40px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(54, 54, 54);
+}
+
+.tex p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.tex a{
+    color: #cfe4e7;
+}
+
+.tex .contiene{
+    padding: 15px;
+    text-align: center;
+}
+
+.tex img{
+    width: 70%;
+    height: 200px;  
+}
+
+@media (min-width:780px){
+
+   .progra .tex{
+          display : flex;
+         justify-content: center;
+         flex-wrap: wrap;/*para poner abjo las cartas cuando ya no caen*/
+        
+   }
+   #cajas .progra{
+    display: flex;
+    justify-content: center;
+}
+
+#cajas h2{
+    font-size: none;
+}
+
+#cajas h3{
+    margin-top: 0;
+}
+
+}
+
+/*HORAS*/
+
+#horas{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.0),
+        rgba(0, 0, 0, 0.0)
+    )
+    ,url("images\ \(17\).jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#horas{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+.tiene:first-child{
+    width: 27%;
+    height:19vh;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(45, 210, 240);
+    margin:40px;
+}
+
+.tiene:nth-child(2){
+    width: 27%;
+    height:20vh;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(45, 210, 240);
+    margin:40px;
+}
+
+.tiene:nth-child(3){
+    width: 27%;
+    height:19vh;
+    border-radius:5px;
+    overflow: hidden;
+    background-color: rgb(45, 210, 240);
+    margin:40px;
+}
+
+#horas .tiene h3{
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+}
+
+#horas p{
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tiene img{
+    width: 30%;
+    height: 60px;
+}
+
+
+
+@media screen and (min-width: 780px){
+   #horas .dividen{
+    display: flex;
+    justify-content: center;
+   }
+
+
+#horas p{
+    display:block;
+    margin-bottom: 30px;
+}
+
+#horas h3{
+    font-size: 4em;
+}
+
+}
+
+
+/* FOOTER*/ 
+
+#contacto{
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(5, 20, 78, 0.664),
+        rgba(0, 0, 0, 0.014)
+    )
+    ,url("images\ \(20\).jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+}
+
+.box_footer a img{
+    height: 40px;
+    width: 40px;
+    background-position: center center; 
+ }
+
+footer{
+
+    width: 100%;
+    height: 50px 0; /*0 px a los costados*/
+}
+
+#contacto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+.box_footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box_footer h2{
+    margin-bottom: 30px;/* da un espaciado entre el link*/
+    color: rgb(255, 254, 254);
+    font-weight: 700;
+}
+
+.box_footer a:hover{
+    color: rgb(60, 255, 239); /*cuando pasa el percursor*/
+    text-align: center;
+}
+
+
+.box_footer p{
+   color: aliceblue;
+}
+
+
+.box_footer a{
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-decoration: none; /*quita los subrayados de las letras*/
+}
+
+.box_footer a:hover{
+    opacity: 0.8;
+}
+
+.box_footer{
+    font-size: 20px;
+}
+
+/*cCONTACTO*/
+
+
+#imagenes{
+    width: 100%;
+    height: 50px 0; /*0 px a los costados*/
+    background-color:  rgba(0, 47, 255, 0.664);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1350px;
+    margin: auto;
+  
+}
+.divicion{
+    display: flex;
+    padding: 5px;/*achica la pantalla*/
+}
+
+.divicion img{
+    width: 50px;
+    margin: 12px;
+    background-position: center center;
+    background-size: cover;  
+ }
+
+.divicion h6{
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    
+}
+
+button{
+    width:60px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid rgba(219, 217, 217, 0.3);
+    color: rgb(0, 0, 0);
+    background-color: rgb(119, 201, 255);
+}
+
+button:hover{
+    background-color: rgb(192, 253, 250);
+}
+
+ @media (max-width:780px){
+
+    #contacto {
+         width:100%;
+    }
+}
